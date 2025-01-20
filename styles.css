@@ -1,0 +1,279 @@
+/* Genel stil */ 
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 36px;
+    color: #2C3E50;
+    margin: 0;
+}
+
+/* Arama ve filtreleme formu */
+.search-form {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-input {
+    padding: 12px;
+    font-size: 16px;
+    width: 250px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.search-input:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+.search-select {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 200px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.search-select:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Yeni Ürün Ekle Butonunu Sayfanın En Altına Taşımak İçin */
+
+.add-product-buttonq {
+    position: fixed; /* Sabit pozisyon */
+    bottom: 20px;    /* Sayfanın alt kısmından 20px mesafe */
+    right: 20px;     /* Sayfanın sağ kısmından 20px mesafe */
+    z-index: 1000;   /* Butonun diğer içeriklerin üstünde görünmesi için */
+}
+
+
+
+.search-button {
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #45a049;
+}
+
+/* Yeni Ürün Ekle Butonu */
+.add-product-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.search-button {
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-transform: uppercase;
+}
+
+/* Hover efekti */
+.search-button:hover {
+    background-color: #45a049;
+}
+
+.search-button i {
+    font-size: 18px;
+}
+
+/* Yeni Ürün Ekleme Formu */
+.add-product-form {
+    background-color: #ffffff;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none; /* Başlangıçta gizli olacak */
+    transition: all 0.3s ease;
+}
+
+/* Form görünür hale geldiğinde animasyon */
+.add-product-form.show {
+    display: block;
+}
+
+
+/* Simge üzerine gelindiğinde animasyon */
+.add-product-button:hover i {
+    transform: translateX(5px);
+}
+
+/* Ürün Ekleme Formu */
+.add-product-form {
+    background-color: #ffffff;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none; /* Başlangıçta gizle */
+    transition: all 0.3s ease; /* Animasyon ekleyelim */
+}
+
+/* Form görünür hale geldiğinde animasyon */
+.add-product-form.show {
+    display: block;
+}
+
+
+.add-product-form input,
+.add-product-form select,
+.add-product-form button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.add-product-form button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-product-form button:hover {
+    background-color: #45a049;
+}
+
+/* Ürün Tablosu */
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.product-table th,
+.product-table td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.product-table th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.product-table td {
+    background-color: #ffffff;
+    font-size: 14px;
+}
+
+.product-table .low-stock {
+    background-color: #ffcccb;
+    color: red;
+}
+
+/* Stok artırma ve azaltma butonları */
+.stock-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.stock-buttons button {
+    padding: 10px 20px;
+    background-color: #0dbed9;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.stock-buttons button:hover {
+    background-color: #0dbed9;
+}
+
+.stock-buttons input {
+    padding: 10px;
+    font-size: 16px;
+    width: 100px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Sayfalama Stil */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.page-link {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 0 5px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.page-link:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.page-link.active {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+}
